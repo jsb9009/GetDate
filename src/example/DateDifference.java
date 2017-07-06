@@ -6,8 +6,13 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
+//TODO JAVADOCS required
 public class DateDifference {
 
+    //TODO javadocs required for methods
+
+    //FIXME java method names normally use camelcase
+    //FIXME if it is possible always use private methods unless they are needed to be accessed from other classes.
     public String[] SplitDate(String input) {
         String dateParts1[] = input.split("-");
         String day  = dateParts1[0];
@@ -33,9 +38,12 @@ public class DateDifference {
         Scanner s = new Scanner(System.in);
         DateDifference df = new DateDifference();
 
+        //TODO move user input getting functionalitis to a separate method
         System.out.print("Insert first date : ");
+        //FIXME better to rename variable date1 with fromDate
         String date1 = s.nextLine();
         System.out.print("Insert second date : ");
+        //FIXME better to rename variable date1 with toDate
         String date2 = s.nextLine();
 
         String dateString1[] = df.SplitDate(date1);
@@ -52,6 +60,7 @@ public class DateDifference {
         int months = age.getMonths();
         int days = age.getDays();
 
+        //TODO possible to move following 3 lines to a separate method
         System.out.println("number of years: " + Math.abs(years));
         System.out.println("number of months: " + Math.abs(months));
         System.out.println("number of days: " + Math.abs(days));
