@@ -1,5 +1,7 @@
 package example;
 
+//Respond to the IDE notifications on demand. eg: remove unused imports etc.
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
@@ -10,13 +12,18 @@ import java.util.Scanner;
 /**
  * Created by jaliya on 7/5/17.
  */
+
+// Use meaningful names as class names
 public class Test {
 
+    // Avoid writing logics in main()
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
 
         System.out.print("Insert first date : ");
+
+        //Variable names should be meaningful
         String a = s.nextLine();
         System.out.print("Insert second date : ");
         String b = s.nextLine();
@@ -31,7 +38,7 @@ public class Test {
             System.out.println(date.getDayOfMonth());
 
                                                        */
-
+    //Break the each functionality to methods when possible
 
         String dateParts1[] = a.split("-");
         String day1  = dateParts1[0];
