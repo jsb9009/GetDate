@@ -3,10 +3,7 @@ package example;
 //Respond to the IDE notifications on demand. eg: remove unused imports etc.
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.Period;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -28,17 +25,7 @@ public class Test {
         System.out.print("Insert second date : ");
         String b = s.nextLine();
 
-            /* DateTimeFormatter formatter = DateTimeFormatter.forPattern("dd/MM/yyyy").withLocale(Locale.UK);
 
-
-            LocalDate date = formatter.parseLocalDate(b);
-
-            System.out.println(date.getYear());
-            System.out.println(date.getMonthOfYear());
-            System.out.println(date.getDayOfMonth());
-
-                                                       */
-    //Break the each functionality to methods when possible
 
         String dateParts1[] = a.split("-");
         String day1  = dateParts1[0];
@@ -62,15 +49,17 @@ public class Test {
         LocalDate fromDay = LocalDate.of(result3,result2,result1);
         LocalDate toDay = LocalDate.of(result6,result5,result4);
 
+
         Period age = Period.between(fromDay,toDay);
+
         int years = age.getYears();
         int months = age.getMonths();
         int days = age.getDays();
 
 
-        System.out.println("number of years: " + years);
-        System.out.println("number of months: " + months);
-        System.out.println("number of months: " + days);
+        System.out.println("number of years: " + Math.abs(years));
+        System.out.println("number of months: " + Math.abs(months));
+        System.out.println("number of days: " + Math.abs(days));
     }
 
 }
